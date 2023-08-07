@@ -1,0 +1,151 @@
+/* General styles */
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  margin: 0;
+  padding: 20px;
+  color: #333; /* Dark grey for text */
+  background-color: #f0f3f7; /* Light grey with a tint of blue for background */
+}
+
+/* Video styles */
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+}
+
+/* Content container styles */
+.content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6); /* Darker semi-transparent overlay */
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Container styles */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Task container styles */
+.task-container {
+  background-color: #fff; /* White for task container background */
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+/* Header styles */
+h1, h2 {
+  color: #512B81; /* Purple for headers */
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Add task styles */
+.add-task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.add-task input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc; /* Light grey for input border */
+  border-radius: 4px;
+}
+
+.add-task button {
+  background-color: #4477CE; /* Blue for add button */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.add-task button:hover {
+  background-color: #8CABFF; /* Lighter blue on hover */
+  transform: scale(1.05);
+}
+
+/* Task list styles */
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  background-color: #512B81; /* Purple for task item background */
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Complete and Delete buttons styles */
+.complete-btn, .delete-btn {
+  background-color: #77C973; /* Green for complete button */
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.complete-btn:hover, .delete-btn:hover {
+  background-color: #4CAF50; /* Lighter green on hover */
+  transform: scale(1.05);
+}
+
+.delete-btn {
+  background-color: #E95353; /* Red for delete button */
+  margin-left: 8px;
+}
+
+/* Completed task styles */
+.completed {
+  text-decoration: line-through;
+  color: #777; /* Dark grey for completed task text */
+}
+
+/* Animation styles */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; transform: translateY(0); }
+  to { opacity: 0; transform: translateY(20px); }
+}
+
+/* Animation for adding a new task */
+.task-item.adding {
+  animation: fadeIn 0.5s ease;
+}
+
+/* Animation for completing a task */
+.task-item.completing {
+  animation: fadeOut 0.5s ease;
+}
+
+/* Animation for deleting a task */
+.task-item.deleting {
+  animation: fadeOut 0.5s ease;
+}
